@@ -35,6 +35,7 @@ body{
     font-size: 30px;
     letter-spacing: 2px;
 }
+
 .menu ul{
     display: flex;
     flex-wrap: wrap;
