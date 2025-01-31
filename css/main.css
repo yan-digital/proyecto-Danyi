@@ -180,7 +180,6 @@ form {
     letter-spacing: 1px;
     transition:.3s;
     color:#9C815E;
-    
 }
 
 .input-box > input::placeholder,
@@ -194,11 +193,14 @@ form {
     color:transparent;
 }
 
+.input-box > input:hover,
+.input-box > textarea:hover {
+    border-bottom:3px solid #d4b56d;
+}
 .input-box > input:focus,
 .input-box > textarea:focus {
     border-bottom:3px solid #d4b56d;
 }
-
 .input-box > textarea {
     width: 50%;
     height: 130px;
@@ -230,44 +232,60 @@ form > button:hover{
     background: #d4b56d;
 }
 
+/* estilo don raul */
+.main-don-raul{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1rem;
+}
+.main-don-raul .text{
+    align-self: center;
+}
+.main-don-raul .img-logo{
+    justify-self: center;
+}
+.main-don-raul .img-menu{
+    justify-self: center;
+    padding: 2rem;
+}
+.main-don-raul .mapa{
+    align-self: flex-end;
+    justify-self: center;
+}
+/* media queries don raul */
+@media screen and (max-width:600px){
+    .main-don-raul{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 1rem;
+    }
+}
 
-@media screen and (max-width:600px) {
+/* media queries contacto */
+@media screen and (max-width: 600px) {
     .container {
         width: 95%;
         display: flex;
         flex-direction: column;
         gap:20px;
     }
-
     .box-info {
         gap:15px;
     }
-
     .box-info > h1 {
         font-size: 1.5rem;
     }
-}
-
-/* estilo desktop */
-@media screen and (min-width:1024px) {
-    .main-don-raul{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        gap: 1rem;
-}
-    .main-don-raul .text{
-        align-self: center;
-}
-    .main-don-raul .img-logo{
-        justify-self: center;
-}
-    .main-don-raul .img-menu{
-        justify-self: center;
-        padding: 2rem;
-}
-    .main-don-raul .mapa{
-        align-self: flex-end;
-        justify-self: center;
-}
+    form > button {
+        width: 30%;
+    }
+    .input-box > input{
+        width: 70%;
+        height: 40px;
+    }
+    .input-box > textarea {
+        width: 70%;
+    }
 }
