@@ -35,7 +35,6 @@ body{
     font-size: 30px;
     letter-spacing: 2px;
 }
-
 .menu ul{
     display: flex;
     flex-wrap: wrap;
@@ -54,9 +53,7 @@ body{
     font-weight:400;
     font-size: 20px;
 }
-
 /* header */
-
 .header-index{
     display: flex;
     align-items: center;
@@ -66,7 +63,6 @@ body{
     width: 400px;
     height: 400px;
 }
-
 /* Textos */
 h1{
     background: linear-gradient(#9c815e8e, transparent);
@@ -75,19 +71,17 @@ h1{
     color: #1d1c19;
     padding: 50px;
 }
-
 h2{
-    text-align: left;
+    text-align: center;
     color: #404636;
     font-size: 35px;
     font-style: italic;
-    margin: 50px;
+    margin: 20px;
 }
-
 p{
     color: #c18769;;
     text-align: justify;
-    margin: 20px;
+    margin: 20px 50px;
     font-size: 20px;
     line-height: 28px;
     letter-spacing: 2px;
@@ -115,15 +109,15 @@ p{
     letter-spacing: 2px;
     padding: 1rem;
 }
-.texto h2{
-    text-align: center;
-}
 .catering{
     display: flex;
 }
 .fotografia{
     display: flex;
 }
+
+
+
 /* footer */
 footer{
     display: flex;
@@ -160,9 +154,17 @@ footer a{
         padding: 15px;
         box-shadow: 0 0 10px rgba(54, 50, 50, 0.404);
     }
+    ul > li{
+        color: #c18769;;
+        text-align: justify;
+        margin: 20px 50px;
+        font-size: 20px;
+        line-height: 28px;
+        letter-spacing: 2px;
+        padding: 1rem;
+    }
 
 /* estilo del form */
-
 
 form {
     display:flex;
