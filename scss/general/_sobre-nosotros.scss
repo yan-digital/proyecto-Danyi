@@ -1,0 +1,71 @@
+//import variables
+@import "../utilidades/variables";
+//import mixin
+@import "../utilidades/mixin";
+
+/* mobile first */
+/* estilos de header */
+header{
+    .flex-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        @include linear-gradient;
+        padding: 1rem;
+    }
+    .titulo-flex{
+        h1{
+            @include h1;
+            background: transparent;
+            padding-top: 1rem;
+        }
+    }
+    .flex-img{
+        img{
+            border: 1px solid $border-color;
+            padding: 1rem;
+            box-shadow: $shadow;
+            @include sizes (100%, auto);
+        }
+    }
+}
+/* estilos de main */
+main{
+    h2{
+        @include h2;
+    }
+    p{
+        @include text;
+    }
+}
+
+/* media query para Tablet */
+
+@media screen and (min-width: 600px){
+    main{
+        h2{
+            text-align: left;
+            margin-left: 3rem;
+        }
+    }
+}
+
+/* media query para Desktop */
+@media screen and (min-width: 1024px){
+    header{
+        .flex-container{
+            flex-direction: row;
+            padding-top: 50px;
+        }
+        .titulo-flex{
+            h1{
+                padding-top: 25%;
+            }
+        }
+    }
+    main{
+        h2{
+            text-align: center;
+        }
+    }
+}

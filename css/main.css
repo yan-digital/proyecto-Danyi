@@ -43,6 +43,7 @@ main .menu-index ul li {
 }
 main .menu-index ul li a {
   text-decoration: none;
+  list-style: none;
   font-family: "Montserrat", serif;
   color: #c18769;
   font-weight: 400;
@@ -65,6 +66,7 @@ footer {
 }
 footer a {
   text-decoration: none;
+  list-style: none;
   font-family: "Montserrat", serif;
   color: #c18769;
   font-weight: 600;
@@ -99,6 +101,69 @@ footer a {
   }
   footer {
     justify-content: flex-end;
+  }
+}
+/* mobile first */
+/* estilos de header */
+header .flex-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background: linear-gradient(rgba(156, 129, 94, 0.5568627451), transparent);
+  padding: 1rem;
+}
+header .titulo-flex h1 {
+  text-align: center;
+  font-size: 50px;
+  color: #1d1c19;
+  padding: 50px;
+  background: transparent;
+  padding-top: 1rem;
+}
+header .flex-img img {
+  border: 1px solid #d4b56d;
+  padding: 1rem;
+  box-shadow: 0 0 10px rgba(54, 50, 50, 0.404);
+  height: auto;
+  width: 100%;
+}
+
+/* estilos de main */
+main h2 {
+  text-align: center;
+  color: #404636;
+  font-size: 35px;
+  font-style: italic;
+  margin: 20px;
+}
+main p {
+  color: #c18769;
+  text-align: left;
+  margin: 20px 1rem;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: 2px;
+  padding: 1rem;
+}
+
+/* media query para Tablet */
+@media screen and (min-width: 600px) {
+  main h2 {
+    text-align: left;
+    margin-left: 3rem;
+  }
+}
+/* media query para Desktop */
+@media screen and (min-width: 1024px) {
+  header .flex-container {
+    flex-direction: row;
+    padding-top: 50px;
+  }
+  header .titulo-flex h1 {
+    padding-top: 25%;
+  }
+  main h2 {
+    text-align: center;
   }
 }
 

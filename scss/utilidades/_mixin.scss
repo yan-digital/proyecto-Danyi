@@ -1,12 +1,42 @@
 //mixin del proyecto
-//mixin de tamaño
 
+//mixin de tamaño
 @mixin sizes($width, $height) {
     height: $height;
     width: $width;
 }
+@mixin linear-gradient{
+    background: linear-gradient(#9c815e8e, transparent);
+}
+//mixin de listas
 @mixin list-style{
     text-decoration: none;
+    list-style: none;
     font-family: $main-font;
     color: $text-color;
+}
+//mixin de titulo principal
+@mixin h1 {
+    text-align: center;
+    font-size: 50px;
+    color: $title-color;
+    padding: 50px;
+}
+//mixin de subtitulo
+@mixin h2 {
+    text-align: center;
+    color: $subtitle-color;
+    font-size: 35px;
+    font-style: italic;
+    margin: 20px;
+}
+//mixin de texto
+@mixin text{
+    color: $text-color;
+    text-align: left;
+    margin: 20px 1rem;
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: 2px;
+    padding: 1rem;
 }
