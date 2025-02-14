@@ -1,0 +1,12 @@
+//mixin del proyecto
+//mixin de tamaño
+
+@mixin sizes($width, $height) {
+    height: $height;
+    width: $width;
+}
+@mixin list-style{
+    text-decoration: none;
+    font-family: $main-font;
+    color: $text-color;
+}

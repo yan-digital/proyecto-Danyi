@@ -1,0 +1,99 @@
+//import variables
+@import "../utilidades/variables";
+//import mixin
+@import "../utilidades/mixin";
+
+/* mobile first */
+/* estilos de header */
+.header-index{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem;
+    img{
+        @include sizes (400px, 400px);
+    }
+}
+/* estilos de main */
+main{
+    .menu-index{
+        ul{
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+            padding: 5px;
+            @include sizes (100%, 50%);
+            justify-content: space-evenly;
+            margin-bottom: 20px;
+            li{
+                padding: 20px;
+                margin: 5px;
+                text-align: center;
+                align-content: center;
+                a{
+                    @include list-style;
+                    font-weight:400;
+                    font-size: 30px;
+                    letter-spacing: 2px;
+                    box-shadow: $shadow;
+                }
+            }
+        }
+    }
+}
+/* estilos de footer */
+footer{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    @include sizes (100%, 20%);
+    gap: 15px;
+    padding: 1rem;
+    border-top: 5px $border-color solid;
+    background-color: $background-color;
+    a{
+        @include list-style;
+        font-weight: 600;
+        text-transform: capitalize;
+    }
+}
+.full-container{
+    min-height: 100dvh;
+    display:grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+/* media query para Tablet */
+@media screen and (min-width: 600px){
+    main{
+        .menu-index{
+            ul{
+                @include sizes (100%, 100%);
+                justify-content: center;
+                margin-top: 10%;
+            }
+        }
+    }
+    footer{
+        justify-content: flex-start;
+    }
+}
+
+/*media query para Desktop */
+
+@media screen and (min-width: 1024px){
+    .header-index{
+        margin:0
+    }
+        main{
+            .menu-index{
+                ul{
+                    margin-top: 0;
+                    
+                }
+            }
+        }
+        footer{
+            justify-content: flex-end;
+        }
+    }
