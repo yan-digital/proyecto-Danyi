@@ -1,0 +1,88 @@
+//import variables
+@import "../utilidades/variables";
+//import mixin
+@import "../utilidades/mixin";
+
+/* mobile first */
+/* estilos de header */
+header{
+    h1{
+        @include h1;
+        @include linear-gradient;
+    }
+}
+main{
+    .servicio{
+        display:flex;
+        flex-direction: column;
+        .texto{
+            line-height: 1.5rem;
+            letter-spacing: 2px;
+            padding: 0.5rem;
+            text-align: justify;
+        }
+        .media{
+            img{
+                border: 1px solid $border-color;
+                padding: 1rem;
+                margin: 1rem;
+                box-shadow: $shadow;
+                @include sizes (95%, auto);
+            }
+            video{
+                @include sizes (95%, 50vh);
+                justify-self: right;
+                margin: 1rem;
+            }
+        }
+    }
+}
+
+/* media query para Tablet */
+@media screen and (min-width:600px){
+    main{
+        .servicio{
+            .media{
+                display: flex;
+                flex-direction: row;
+                img{
+                    border: 1px solid $border-color;
+                    padding: 1rem;
+                    margin: 1rem;
+                    box-shadow: $shadow;
+                    @include sizes (50%, 25%);
+                    align-self: center;
+                }
+                video{
+                    @include sizes (50%, 50vh);
+                    justify-self: right;
+                    margin: 1rem;
+                }
+            }
+        }
+    }
+}
+
+/* media query para desktop */
+@media screen and (min-width:1024px){
+    main{
+        .servicio{
+            display: flex;
+            flex-direction: row;
+            .texto{
+                @include sizes (70%, auto);
+                align-self: center;
+            }
+            .media{
+                flex-direction: column;
+                margin-right: 1rem;
+                img{
+                    @include sizes (100%, auto);
+                }
+                video{
+                    @include sizes (55%, auto);
+                }
+            }
+        }
+    }
+}

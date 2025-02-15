@@ -1,0 +1,87 @@
+//import variables
+@import "../utilidades/variables";
+//import mixin
+@import "../utilidades/mixin";
+
+/* mobile first */
+/*header*/
+.container{
+    .box-info{
+        @include linear-gradient;
+        h1{
+            @include h1;
+            font-size: 1.5rem;
+        }
+    }
+}
+main{
+    form{
+        display:flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        .input-box{
+            @include sizes (70%, 40px);
+            input{
+                width: 100%;
+                padding: 0 10px;
+                outline:none;
+                background: rgba(193 135 105 / .1);
+                border:3px solid transparent;
+                letter-spacing: 1px;
+                color:#9C815E;
+                margin: 1rem;
+            }
+            textarea{
+                width: 100%;
+                padding: 10px;
+                background: rgba(193 135 105 / .1);
+                border:3px solid transparent;
+                letter-spacing: 1px;
+                outline: none;
+                color:#9C815E;
+                letter-spacing: 1.5px;
+                margin: 1rem;
+            }
+        }
+        button{
+            width: 25%;
+            padding: 10px;
+            outline: none;
+            background: #9c815efa;
+            color:#fff;
+            border:none;
+            transition: .1s;
+            cursor: pointer;
+            font-size: 1rem;
+            align-self: center;
+            margin: 10dvh;
+            width: 70%;
+        }
+    }
+}
+
+/*media query para Tablet */
+@media screen and (min-width:600px){
+    .container{
+        .box-info{
+            padding-top: 15%;
+            h1{
+                @include h1;
+                background: transparent;
+            }
+        }
+    }
+}
+/*media query para Desktop*/
+@media screen and (min-width:1024px){
+    .container{
+        .box-info{
+            h1{
+                @include h1;
+            }
+        }
+    }
+}

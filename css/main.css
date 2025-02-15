@@ -9,6 +9,9 @@
 body {
   background-color: #eae9db;
   font-family: "Montserrat", serif;
+  min-height: 100dvh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 }
 
 /* mobile first */
@@ -103,7 +106,19 @@ footer a {
     justify-content: flex-end;
   }
 }
-/* mobile first */
+/* mobile first sobre nosotros*/
+/*estilo del nav*/
+.menu ul {
+  list-style: none;
+}
+.menu ul li a {
+  color: #eae9db;
+  font-family: "Montserrat", serif;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 20px;
+}
+
 /* estilos de header */
 header .flex-container {
   display: flex;
@@ -164,6 +179,245 @@ main p {
   }
   main h2 {
     text-align: center;
+  }
+}
+/* mobile first */
+/* estilos de header */
+header h1 {
+  text-align: center;
+  font-size: 50px;
+  color: #1d1c19;
+  padding: 50px;
+  background: linear-gradient(rgba(156, 129, 94, 0.5568627451), transparent);
+}
+
+main .servicio {
+  display: flex;
+  flex-direction: column;
+}
+main .servicio .texto {
+  line-height: 1.5rem;
+  letter-spacing: 2px;
+  padding: 0.5rem;
+  text-align: justify;
+}
+main .servicio .media img {
+  border: 1px solid #d4b56d;
+  padding: 1rem;
+  margin: 1rem;
+  box-shadow: 0 0 10px rgba(54, 50, 50, 0.404);
+  height: auto;
+  width: 95%;
+}
+main .servicio .media video {
+  height: 50vh;
+  width: 95%;
+  justify-self: right;
+  margin: 1rem;
+}
+
+/* media query para Tablet */
+@media screen and (min-width: 600px) {
+  main .servicio .media {
+    display: flex;
+    flex-direction: row;
+  }
+  main .servicio .media img {
+    border: 1px solid #d4b56d;
+    padding: 1rem;
+    margin: 1rem;
+    box-shadow: 0 0 10px rgba(54, 50, 50, 0.404);
+    height: 25%;
+    width: 50%;
+    align-self: center;
+  }
+  main .servicio .media video {
+    height: 50vh;
+    width: 50%;
+    justify-self: right;
+    margin: 1rem;
+  }
+}
+/* media query para desktop */
+@media screen and (min-width: 1024px) {
+  main .servicio {
+    display: flex;
+    flex-direction: row;
+  }
+  main .servicio .texto {
+    height: auto;
+    width: 70%;
+    align-self: center;
+  }
+  main .servicio .media {
+    flex-direction: column;
+    margin-right: 1rem;
+  }
+  main .servicio .media img {
+    height: auto;
+    width: 100%;
+  }
+  main .servicio .media video {
+    height: auto;
+    width: 55%;
+  }
+}
+/* mobile first */
+/*estiolo de main*/
+.main-don-raul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+}
+.main-don-raul .img-logo img {
+  justify-self: center;
+  height: auto;
+  width: 100%;
+}
+.main-don-raul .media-dr .img-menu {
+  margin: 1rem;
+  justify-self: center;
+}
+.main-don-raul .media-dr .mapa {
+  margin: 2rem;
+}
+.main-don-raul .text {
+  text-align: center;
+}
+
+/*media query para Tablet*/
+@media screen and (min-width: 600px) {
+  .main-don-raul .text {
+    text-align: justify;
+  }
+  .main-don-raul .img-menu {
+    flex-direction: row;
+  }
+  .main-don-raul .media-dr {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .main-don-raul .media-dr .img-menu img {
+    margin-left: 32px;
+  }
+  .main-don-raul .media-dr .mapa {
+    align-self: center;
+    height: auto;
+    width: 45dvh;
+  }
+}
+/*media query para Desktop */
+@media screen and (min-width: 1024px) {
+  .main-don-raul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "logo logo" "texto carta" "mapa mapa";
+    grid-gap: 1rem;
+  }
+  .main-don-raul .img-logo {
+    grid-area: logo;
+    align-self: center;
+    justify-self: center;
+  }
+  .main-don-raul .text {
+    grid-area: texto;
+  }
+  .main-don-raul .media-dr {
+    display: block;
+  }
+  .main-don-raul .img-menu {
+    grid-area: carta;
+  }
+  .main-don-raul .mapa {
+    grid-area: mapa;
+  }
+}
+/* mobile first */
+/*header*/
+.container .box-info {
+  background: linear-gradient(rgba(156, 129, 94, 0.5568627451), transparent);
+}
+.container .box-info h1 {
+  text-align: center;
+  font-size: 50px;
+  color: #1d1c19;
+  padding: 50px;
+  font-size: 1.5rem;
+}
+
+main form {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+main form .input-box {
+  height: 40px;
+  width: 70%;
+}
+main form .input-box input {
+  width: 100%;
+  padding: 0 10px;
+  outline: none;
+  background: rgba(193, 135, 105, 0.1);
+  border: 3px solid transparent;
+  letter-spacing: 1px;
+  color: #9C815E;
+  margin: 1rem;
+}
+main form .input-box textarea {
+  width: 100%;
+  padding: 10px;
+  background: rgba(193, 135, 105, 0.1);
+  border: 3px solid transparent;
+  letter-spacing: 1px;
+  outline: none;
+  color: #9C815E;
+  letter-spacing: 1.5px;
+  margin: 1rem;
+}
+main form button {
+  width: 25%;
+  padding: 10px;
+  outline: none;
+  background: rgba(156, 129, 94, 0.9803921569);
+  color: #fff;
+  border: none;
+  transition: 0.1s;
+  cursor: pointer;
+  font-size: 1rem;
+  align-self: center;
+  margin: 10dvh;
+  width: 70%;
+}
+
+/*media query para Tablet */
+@media screen and (min-width: 600px) {
+  .container .box-info {
+    padding-top: 15%;
+  }
+  .container .box-info h1 {
+    text-align: center;
+    font-size: 50px;
+    color: #1d1c19;
+    padding: 50px;
+    background: transparent;
+  }
+}
+/*media query para Desktop*/
+@media screen and (min-width: 1024px) {
+  .container .box-info h1 {
+    text-align: center;
+    font-size: 50px;
+    color: #1d1c19;
+    padding: 50px;
   }
 }
 
