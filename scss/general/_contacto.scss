@@ -32,7 +32,21 @@ main{
                 border:3px solid transparent;
                 letter-spacing: 1px;
                 color:#9C815E;
+                transition:.3s;
                 margin: 1rem;
+                &::placeholder{
+                    color: $title-color;
+                    transition: color 0.3s ease;
+                }
+                &:focus::placeholder {
+                    color: transparent;
+                }
+                &:focus{
+                    border-bottom:3px solid $border-color;
+                }
+                &:hover{
+                    border-bottom:3px solid $border-color;
+                }
             }
             textarea{
                 width: 100%;
@@ -44,6 +58,19 @@ main{
                 color:#9C815E;
                 letter-spacing: 1.5px;
                 margin: 1rem;
+                &::placeholder{
+                    color: $title-color;
+                    transition: color 0.3s ease;
+                }
+                &:focus::placeholder {
+                    color: transparent;
+                }
+                &:focus{
+                    border-bottom:3px solid $border-color;
+                }
+                &:hover{
+                    border-bottom:3px solid $border-color;
+                }
             }
         }
         button{
@@ -59,6 +86,9 @@ main{
             align-self: center;
             margin: 10dvh;
             width: 70%;
+            &:hover{
+                background: $border-color;
+            }
         }
     }
 }

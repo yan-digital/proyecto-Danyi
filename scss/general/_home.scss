@@ -19,7 +19,6 @@ main{
     .menu-index{
         ul{
             display: flex;
-            flex-wrap: wrap;
             list-style: none;
             padding: 5px;
             @include sizes (100%, 50%);
@@ -55,12 +54,11 @@ footer{
         @include list-style;
         font-weight: 600;
         text-transform: capitalize;
+        &:hover{
+            font-size: 20px;
+            text-decoration: underline;
+        }
     }
-}
-.full-container{
-    min-height: 100dvh;
-    display:grid;
-    grid-template-rows: auto 1fr auto;
 }
 
 /* media query para Tablet */
@@ -89,7 +87,7 @@ footer{
             .menu-index{
                 ul{
                     margin-top: 0;
-                    
+                    @include sizes (100%, 50%);
                 }
             }
         }

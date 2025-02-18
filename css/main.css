@@ -30,7 +30,6 @@ body {
 /* estilos de main */
 main .menu-index ul {
   display: flex;
-  flex-wrap: wrap;
   list-style: none;
   padding: 5px;
   height: 50%;
@@ -75,11 +74,9 @@ footer a {
   font-weight: 600;
   text-transform: capitalize;
 }
-
-.full-container {
-  min-height: 100dvh;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
+footer a:hover {
+  font-size: 20px;
+  text-decoration: underline;
 }
 
 /* media query para Tablet */
@@ -101,6 +98,8 @@ footer a {
   }
   main .menu-index ul {
     margin-top: 0;
+    height: 50%;
+    width: 100%;
   }
   footer {
     justify-content: flex-end;
@@ -117,6 +116,9 @@ footer a {
   text-decoration: none;
   font-weight: 400;
   font-size: 20px;
+}
+.menu ul li a:hover {
+  text-decoration: underline;
 }
 
 /* estilos de header */
@@ -370,7 +372,21 @@ main form .input-box input {
   border: 3px solid transparent;
   letter-spacing: 1px;
   color: #9C815E;
+  transition: 0.3s;
   margin: 1rem;
+}
+main form .input-box input::placeholder {
+  color: #1d1c19;
+  transition: color 0.3s ease;
+}
+main form .input-box input:focus::placeholder {
+  color: transparent;
+}
+main form .input-box input:focus {
+  border-bottom: 3px solid #d4b56d;
+}
+main form .input-box input:hover {
+  border-bottom: 3px solid #d4b56d;
 }
 main form .input-box textarea {
   width: 100%;
@@ -382,6 +398,19 @@ main form .input-box textarea {
   color: #9C815E;
   letter-spacing: 1.5px;
   margin: 1rem;
+}
+main form .input-box textarea::placeholder {
+  color: #1d1c19;
+  transition: color 0.3s ease;
+}
+main form .input-box textarea:focus::placeholder {
+  color: transparent;
+}
+main form .input-box textarea:focus {
+  border-bottom: 3px solid #d4b56d;
+}
+main form .input-box textarea:hover {
+  border-bottom: 3px solid #d4b56d;
 }
 main form button {
   width: 25%;
@@ -396,6 +425,9 @@ main form button {
   align-self: center;
   margin: 10dvh;
   width: 70%;
+}
+main form button:hover {
+  background: #d4b56d;
 }
 
 /*media query para Tablet */
