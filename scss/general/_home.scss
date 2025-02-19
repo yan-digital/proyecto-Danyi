@@ -54,6 +54,7 @@ footer{
         @include list-style;
         font-weight: 600;
         text-transform: capitalize;
+        transition:.5s;
         &:hover{
             font-size: 20px;
             text-decoration: underline;
@@ -88,6 +89,15 @@ footer{
                 ul{
                     margin-top: 0;
                     @include sizes (100%, 50%);
+                    li{
+                        a{
+                            font-size: 16px;
+                            transition:.5s;
+                            &:hover{
+                                font-size: 18px;
+                            }
+                        }
+                    }
                 }
             }
         }

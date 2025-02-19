@@ -73,6 +73,7 @@ footer a {
   color: #c18769;
   font-weight: 600;
   text-transform: capitalize;
+  transition: 0.5s;
 }
 footer a:hover {
   font-size: 20px;
@@ -100,6 +101,13 @@ footer a:hover {
     margin-top: 0;
     height: 50%;
     width: 100%;
+  }
+  main .menu-index ul li a {
+    font-size: 16px;
+    transition: 0.5s;
+  }
+  main .menu-index ul li a:hover {
+    font-size: 18px;
   }
   footer {
     justify-content: flex-end;
