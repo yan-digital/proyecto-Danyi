@@ -278,35 +278,41 @@ main .servicio .media video {
   height: auto;
   width: 100%;
 }
-.main-don-raul .media-dr .img-menu {
+.main-don-raul .img-menu {
   margin: 1rem;
   justify-self: center;
 }
-.main-don-raul .media-dr .mapa {
+.main-don-raul .mapa {
   margin: 2rem;
 }
-.main-don-raul .text {
+
+.text {
   text-align: center;
 }
 
 /*media query para Tablet*/
 @media screen and (min-width: 600px) {
+  .main-don-raul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "logo logo" "texto texto" "carta mapa";
+    grid-gap: 1rem;
+  }
+  .main-don-raul .img-logo {
+    grid-area: logo;
+    align-self: center;
+    justify-self: center;
+  }
   .main-don-raul .text {
-    text-align: justify;
+    grid-area: texto;
   }
   .main-don-raul .img-menu {
-    flex-direction: row;
-  }
-  .main-don-raul .media-dr {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-  }
-  .main-don-raul .media-dr .img-menu img {
+    grid-area: carta;
     margin-left: 32px;
   }
-  .main-don-raul .media-dr .mapa {
+  .main-don-raul .mapa {
+    grid-area: mapa;
     align-self: center;
     height: auto;
     width: 45dvh;
@@ -329,14 +335,12 @@ main .servicio .media video {
   .main-don-raul .text {
     grid-area: texto;
   }
-  .main-don-raul .media-dr {
-    display: block;
-  }
   .main-don-raul .img-menu {
     grid-area: carta;
   }
   .main-don-raul .mapa {
     grid-area: mapa;
+    justify-self: center;
   }
 }
 /* mobile first */
