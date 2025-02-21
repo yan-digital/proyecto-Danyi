@@ -386,6 +386,7 @@ main form .input-box input {
   color: #9C815E;
   transition: 0.3s;
   margin: 1rem;
+  border-radius: 4px;
 }
 main form .input-box input::placeholder {
   color: #1d1c19;
@@ -410,6 +411,7 @@ main form .input-box textarea {
   color: #9C815E;
   letter-spacing: 1.5px;
   margin: 1rem;
+  border-radius: 4px;
 }
 main form .input-box textarea::placeholder {
   color: #1d1c19;
@@ -437,6 +439,7 @@ main form button {
   align-self: center;
   margin: 10dvh;
   width: 70%;
+  border-radius: 4px;
 }
 main form button:hover {
   background: #d4b56d;
@@ -462,6 +465,9 @@ main form button:hover {
     font-size: 50px;
     color: #1d1c19;
     padding: 50px;
+  }
+  main form button {
+    width: 50%;
   }
 }
 
