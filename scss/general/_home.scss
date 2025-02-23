@@ -11,7 +11,7 @@
     justify-content: center;
     margin: 2rem;
     img{
-        @include sizes (400px, 400px);
+        @include sizes (300px, 300px);
     }
 }
 /* estilos de main */
@@ -19,6 +19,7 @@ main{
     .menu-index{
         ul{
             display: flex;
+            flex-direction: column;
             list-style: none;
             padding: 5px;
             @include sizes (100%, 50%);
@@ -32,8 +33,7 @@ main{
                 a{
                     @include list-style;
                     font-weight:400;
-                    font-size: 30px;
-                    letter-spacing: 2px;
+                    font-size: 21px;
                     box-shadow: $shadow;
                 }
             }
@@ -64,12 +64,22 @@ footer{
 
 /* media query para Tablet */
 @media screen and (min-width: 600px){
+    .header-index{
+        margin-top: 10%;
+    }
     main{
         .menu-index{
             ul{
+                flex-direction: row;
                 @include sizes (100%, 100%);
                 justify-content: center;
                 margin-top: 10%;
+                li{
+                    margin-top: 15%;
+                    a{
+                        letter-spacing: 2px;
+                    }
+                }
             }
         }
     }

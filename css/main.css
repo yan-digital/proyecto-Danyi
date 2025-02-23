@@ -23,13 +23,14 @@ body {
   margin: 2rem;
 }
 .header-index img {
-  height: 400px;
-  width: 400px;
+  height: 300px;
+  width: 300px;
 }
 
 /* estilos de main */
 main .menu-index ul {
   display: flex;
+  flex-direction: column;
   list-style: none;
   padding: 5px;
   height: 50%;
@@ -49,8 +50,7 @@ main .menu-index ul li a {
   font-family: "Montserrat", serif;
   color: #c18769;
   font-weight: 400;
-  font-size: 30px;
-  letter-spacing: 2px;
+  font-size: 21px;
   box-shadow: 0 0 10px rgba(54, 50, 50, 0.404);
 }
 
@@ -82,11 +82,21 @@ footer a:hover {
 
 /* media query para Tablet */
 @media screen and (min-width: 600px) {
+  .header-index {
+    margin-top: 10%;
+  }
   main .menu-index ul {
+    flex-direction: row;
     height: 100%;
     width: 100%;
     justify-content: center;
     margin-top: 10%;
+  }
+  main .menu-index ul li {
+    margin-top: 15%;
+  }
+  main .menu-index ul li a {
+    letter-spacing: 2px;
   }
   footer {
     justify-content: flex-start;
@@ -412,6 +422,8 @@ main form .input-box textarea {
   letter-spacing: 1.5px;
   margin: 1rem;
   border-radius: 4px;
+  min-height: 120px;
+  resize: none;
 }
 main form .input-box textarea::placeholder {
   color: #1d1c19;
@@ -437,7 +449,7 @@ main form button {
   cursor: pointer;
   font-size: 1rem;
   align-self: center;
-  margin: 10dvh;
+  margin: 10%;
   width: 70%;
   border-radius: 4px;
 }
