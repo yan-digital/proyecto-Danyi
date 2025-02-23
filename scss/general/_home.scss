@@ -91,15 +91,13 @@ footer{
 /*media query para Desktop */
 
 @media screen and (min-width: 1024px){
-    .header-index{
-        margin:0
-    }
         main{
             .menu-index{
                 ul{
                     margin-top: 0;
                     @include sizes (100%, 50%);
                     li{
+                        margin: 0;
                         a{
                             font-size: 16px;
                             transition:.5s;
